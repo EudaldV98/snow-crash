@@ -5,7 +5,7 @@ Login as `level04`
 ```bash
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level03
-level03@192.168.1.64's password: qi0maab88jeaj46qoumi7maus
+level04@192.168.1.64's password: qi0maab88jeaj46qoumi7maus
 ```
 
 We have a Perl script in the home directory.

@@ -5,7 +5,7 @@ Login as `level05`
 ```bash
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level05
-level03@192.168.1.64's password: ne2searoevaevoem4ov4ar8ap
+level05@192.168.1.64's password: ne2searoevaevoem4ov4ar8ap
 You have a new mail.
 ```
 
