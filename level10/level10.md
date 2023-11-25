@@ -5,7 +5,7 @@ Login as `level10`
 ```bash
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level10
-level09@192.168.1.64's password: s5cAJpM8ev6XHw998pRWG728z
+level10@192.168.1.64's password: s5cAJpM8ev6XHw998pRWG728z
 ```
 
 As in some of the previous levels, we have a `SUID binary` and a `token` file:
